@@ -2,8 +2,7 @@
 
 mongo="${MONGO:-mongo}"
 mongoport="${MONGOPORT:-27017}"
-elasticsearch="${ELASTICSEARCH:-elasticsearch}"
-elasticport="${ELASTICPORT:-9200}"
+elasticsearch="${ELASTICSEARCH}"
 
 
 function _mongo() {
@@ -29,4 +28,4 @@ done
 
 sleep 1
 
-mongo-connector --auto-commit-interval=0 --oplog-ts=/data/oplog.ts -m ${mongo}:${mongoport} -t ${elasticsearch}:${elasticport} -d elastic_doc_manager
+mongo-connector -c ./config.json -m ${mongo}:${mongoport} -t ${elasticsearch} -d elastic2_doc_manager

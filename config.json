@@ -1,0 +1,23 @@
+{
+  "docManagers": [
+    {
+      "docManager": "elastic2_doc_manager",
+      "targetURL": "search-elastic-test-5d7q73lce7j53trxbq4fcsybyy.us-west-2.es.amazonaws.com",
+      "args": {
+        "aws": {
+            "region": "us-west-2",
+            "access_id": "ACCESS_ID",
+            "secret_key": "SECRET_KEY"
+        },
+        "clientOptions": {
+          "verify_certs": true,
+          "use_ssl": true
+        }
+      }
+    }
+  ],
+  "verbosity": 3,
+  "namespaces": {
+    "include": ["atlas"]
+  }
+}
