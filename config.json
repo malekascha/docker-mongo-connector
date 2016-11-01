@@ -6,8 +6,8 @@
       "args": {
         "aws": {
             "region": "us-west-2",
-            "access_id": "ACCESS_ID",
-            "secret_key": "SECRET_KEY"
+            "access_id": "ACCESS KEY",
+            "secret_key": "SECRET KEY"
         },
         "clientOptions": {
           "verify_certs": true,
@@ -16,8 +16,11 @@
       }
     }
   ],
+  "logging": {
+    "type": "stream"
+  },
   "verbosity": 3,
   "namespaces": {
-    "include": ["atlas"]
+    "include": ["atlas.items"]
   }
 }

@@ -1,13 +1,12 @@
 #This will prepare a elasticsearch node with mongo-connector enabled
 
-FROM python:3.6
+FROM python:2.7
 MAINTAINER yeasy@github
 
 
 RUN pip install certifi
-RUN pip install mongo-connector
-RUN pip show mongo-connector
-RUN pip install elastic2-doc-manager[aws]
+RUN pip install https://github.com/mongodb-labs/mongo-connector/archive/master.zip
+RUN pip install https://github.com/mongodb-labs/elastic2-doc-manager/archive/master.zip
 
 ENV DEBIAN_FRONTEND noninteractive
 
